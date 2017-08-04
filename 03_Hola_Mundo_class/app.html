@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hola Mundo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../node_modules/angular/angular.js"></script>
+        <script src="./appModule.js"></script>
+        <script src="./appController.js"></script>
+    </head>
+    <body ng-app="appMain" ng-controller="AppController as $ctrl">
+        <form>
+            <p>
+                <label for="name">Nombre</label>
+                <input id="name" type="text" ng-model="$ctrl.user.name">
+            </p>
+             <p>
+                <label for="apellido">Apellido</label>
+                <input id="apellido" type="text" ng-model="$ctrl.user.apellido">
+            </p>           
+            <p>
+                <button ng-click="$ctrl.borrar()">Borrar</button>
+            </p>
+        </form>
+        <p>Hola {{$ctrl.user.name.toUpperCase()}} {{$ctrl.user.apellido.toUpperCase()}}</p>
+    </body>
+</html>

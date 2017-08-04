@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<!-- Ejemplo de AngularJS;
+	Se muestra de nuevo el uso de la directiva ngHide y del operador ternario.
+	Se utilizan eventos del movimiento del ratón, 
+	asociando a varios de ellos un mismo manejador, al que se le pasa un parámetro-->
+
+<html lang="es">
+<head>
+	<meta name="keywords" content="web, learning, html5, css3, angularJS">
+	<meta name="author" content="Alejandro" >
+	<meta name="description" content="Ejercicios de angularJS">
+	<meta name="generator" content="Sublime Text">
+	<meta charset="UTF-8">
+	<title>Muestrario</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="stylesheet" href="css/colores.css">
+	<link rel="icon" href="fav_icon.png">
+	<script src="../node_modules/angular/angular.js"></script>
+	<script src="../node_modules/angular-1.6.4/i18n/angular-locale_es-es.js"></script>
+	<script src="js/appModule.js"></script>
+</head>
+
+<body ng-app = "appModule" ng-controller= "AppController">
+	<header>
+		<h1>Muestrario</h1>
+	</header>
+	<article>
+		<p class="big">Ratones inalambricos disponibles en varios colores</p>
+		<p>Para verlos, coloca el cursor sobre la imagen</p>
+
+		<div ng-mouseenter="verColores(true)" ng-mouseleave="verColores(false)">
+			<img src="images/mouse.jpg" >
+			
+			<!-- Se eleimina el botón que existía anteriormente
+			<input type="button"  id="btnColores" value=
+			 	"{{isHidden ? 'Mostrar Colores Disponibles' : 'Ocultar Colores Disponibles'}}"
+				ng-cloak ng-click="btnColores()">
+
+			Alternativa usando button en lugar de input
+			<button type="button" id="btnColores" ng-click="btnColores()" >
+				{{isHidden ? 'Mostrar Colores Disponibles' : 'Ocultar Colores Disponibles'}}
+			</button>
+			-->
+
+			<div class="colores" id="red" ng-show="isHidden">Rojo</div>
+			<div class="colores" id="green" ng-show="isHidden">Verde</div>
+			<div class="colores" id="blue" ng-show="isHidden">Azul</div>
+			<div class="colores" id="purple"ng-show="isHidden">Morado</div>
+			<div class="colores" id="gray" ng-show="isHidden">Gris oscuro</div>
+			<div class="colores" id="olive" ng-show="isHidden">Verde oliva</div>
+		</div>
+	</article>
+	<footer ng-include="'./_footer.html'"></footer>
+</body>
+</html>

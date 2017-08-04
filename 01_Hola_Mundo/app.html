@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hola Mundo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="../node_modules/angular-1.6.4/angular.js"></script>
+    </head>
+    <body ng-app ng-init="name='Pepe';apellido='Perez'">
+        <form>
+            <p>
+                <label for="name">Nombre</label>
+                <input id="name" type="text" ng-model="name">
+            </p>
+             <p>
+                <label for="apellido">Apellido</label>
+                <input id="apellido" type="text" ng-model="apellido">
+            </p>           
+            <p>
+                <button ng-click="name=''; apellido=''">Borrar</button>
+            </p>
+        </form>
+        <p>Hola {{name.toUpperCase()}} {{apellido.toUpperCase()}}</p>
+    </body>
+</html>
