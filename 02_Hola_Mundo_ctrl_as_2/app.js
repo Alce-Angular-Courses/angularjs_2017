@@ -1,15 +1,9 @@
 
 angular.module('appMain', [])
-
-// controoller 2 argumentos: 
-// - su nombre
-// - array de inyeccion de dependencias
-//         - nombre de los argumentos
-//         - función anonima con dichos argumentos
-
 .controller('AppController', AppController)
 
 
+// Controller declarado como una función con nombre
 function AppController () {
    this.user = {
         name : 'Pepe',

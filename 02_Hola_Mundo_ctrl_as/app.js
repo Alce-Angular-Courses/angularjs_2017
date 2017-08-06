@@ -2,9 +2,7 @@ angular.module('appMain', [])
 
 // controoller 2 argumentos: 
 // - su nombre
-// - array de inyeccion de dependencias
-//         - nombre de los argumentos
-//         - función anonima con dichos argumentos
+// - la función anonima responsable de instanciar el $scope
 
 .controller('AppController', function () {
    this.user = {
