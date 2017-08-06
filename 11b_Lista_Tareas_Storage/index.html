@@ -1,0 +1,72 @@
+<!-- Ejemplo de AngularJS;
+	Inyección del servicio LocalStorage, 
+	como ejemplo de servicio NO nativo de Angular 
+ 	El conjunto se formatea utilizando Bootstrap 
+	-->
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lista de tareas</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<!-- build:css(.) styles/vendor.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:css(.tmp) styles/main.css -->
+	<link rel="stylesheet" href="css/default.css">
+	<!-- endbuild -->
+	
+	<script src="../node_modules/jquery/dist/jquery.js"></script>
+	<script src="../node_modules/angular/angular.js"></script>
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="../node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
+	<script src="../node_modules/angular-local-storage/dist/angular-local-storage.min.js"></script>
+	<script src="js/app.js"></script>
+</head>
+	
+<body ng-app="appModule"  ng-controller= "AppController">
+		<!--[if lte IE 8]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+	<div class="container">
+		<div class="row">
+				<header class="col-xs-8 col-xs-offset-2">
+					<h1>Tareas</h1>       
+				</header>      
+		</div>
+
+		<div class="row">
+			<article class="col-xs-8 col-xs-offset-2">
+				
+				<form role="form" ng-submit="addTarea()">
+					<div class="input-group">
+						<input type="text" ng-model="sTarea" placeholder="Describe una tarea" 
+								class="form-control">
+						<span class="input-group-btn">
+							<input type="submit" class="btn btn-primary" value="Añadir">
+						</span>
+					</div>
+				</form>
+				
+				<div class="input-group" ng-repeat="sTarea in aTareas">
+						<input type="text" ng-model="sTarea" class="form-control">
+						<span class="input-group-btn">
+							<button class="btn btn-danger" ng-click="eliminarTarea($index)"
+									aria-label="Eliminar">X</button>
+						</span>
+				</div>    
+			</article>
+		</div> <!--Fin de la fila del articulo-->
+
+		<div class="row">
+			<footer class="col-xs-8 col-xs-offset-2" ng-include=" '../common/_footer.html' "></footer>    
+		</div>
+	</div> <!-- Fin del container-->
+</body>
+</html>

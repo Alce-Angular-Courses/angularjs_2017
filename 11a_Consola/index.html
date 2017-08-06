@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<!-- Ejemplo de AngularJS;
+	Inyección del servicio log, 
+	como ejemplo sencillo de servicio nativo de Angular -->
+
+<html lang="es">
+<head>
+	<meta name="keywords" content="web, learning, html5, css3, angularJS">
+	<meta name="author" content="Alejandro" >
+	<meta name="description" content="Ejercicios de AngularJS">
+	<meta name="generator" content="Visual Studio Code">
+	<meta charset="UTF-8">
+	<title>Sercicio $log</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="icon" href="fav_icon.png">
+
+	<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/appModule.js"></script></head>
+
+<body ng-app = "appModule" ng-controller= "AppController">
+	<header>
+		<h1>Sercicio $log</h1>
+	</header>
+	<article>
+		<p>Comprueba en la consola de JS el resultado de la aplicación<br>
+		Podrás conocer al famoso scope personalmente</p>
+	</article>
+	<footer ng-include=" '../common/_footer.html' "></footer>
+
+</body>
+</html>
