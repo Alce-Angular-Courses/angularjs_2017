@@ -1,9 +1,10 @@
 class AppController {
 
-	constructor ($scope, $log) {
+	constructor ($scope, $log, $locale) {
 		'ngInject';
 		this.$scope = $scope;
 		this.$log = $log;
+		this.$locale = $locale;
 	} // Fin del constructor
 
 
