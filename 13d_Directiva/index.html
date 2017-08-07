@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<!-- Ejemplo de AngularJS;
+	... -->
+
+	<!-- Ejemplo de AngularJS;
+	Creación de una directiva propia <bloque> 
+	utiliza un template de HTML con expresiones de Angular
+    e incorpora un Scope aislado -->
+
+<html lang="es">
+<head>
+	<meta name="keywords" content="web, learning, html5, css3, angularJS">
+	<meta name="author" content="Alejandro" >
+	<meta name="description" content="Ejercicios de AngularJS">
+	<meta name="generator" content="Visual Studio Code">
+	<meta charset="UTF-8">
+	<title>Directivas</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="icon" href="fav_icon.png">
+	<script src="../node_modules/angular/angular.min.js"></script>
+	<script src="js/appModule.js"></script>
+</head>
+
+<body ng-app = "appModule" ng-controller= "AppController">
+	<header>
+		<h1>Directiva propia</h1>
+	</header>
+	<article>
+		<input type="text" ng-model="message" placeholder="Enter message">
+		<hello-world></hello-world>
+	</article>
+	<footer ng-include=" '../common/_footer.html' "></footer>
+</body>
+</html>

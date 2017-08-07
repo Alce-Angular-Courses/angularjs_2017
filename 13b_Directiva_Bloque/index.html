@@ -1,0 +1,31 @@
+<!-- Ejemplo de AngularJS;
+	Creación de una directiva propia <bloque> 
+	utiliza un template de HTML con expresiones de Angular
+    e incorpora un Scope aislado -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Directivas</title>	
+	<meta charset="UTF-8">
+	<meta name="description" content="Ejercicios de AngularJS">
+	<meta name="generator" content="Visual Studio Code">
+	<meta charset="UTF-8">
+	<title>Directivas</title>
+	<link rel="icon" href="fav_icon.png">    
+	<script src="../node_modules/angular/angular.min.js"></script>
+</head>
+
+<body data-ng-app="appPrueba" data-ng-controller="MainController as $ctrl">
+
+    <ng-include src="'partials/cabeza.html'"></ng-include>     
+    
+    <bloque user="$ctrl.persona"></bloque>     
+    
+    <ng-include src="'partials/pie.html'"></ng-include>        
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+

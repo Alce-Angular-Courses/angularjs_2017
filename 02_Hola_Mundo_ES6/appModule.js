@@ -1,6 +1,5 @@
 
-angular.module('appMain', [
-])
+angular.module('appMain', [])
 
 
 

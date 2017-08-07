@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Directivas : Transclusion</title>	
+	<meta charset="UTF-8">
+	<meta name="description" content="Ejercicios de AngularJS">
+	<meta name="author" content="Alejandro Cerezo">  	
+	<meta name="generator" content="Visual Studio Code">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">		
+  	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="icon" href="fav_icon.png">
+	<script src="../node_modules/angular/angular.min.js"></script>
+	<script src="../node_modules/angular-i18n/angular-locale_es-es.js"></script>
+    <script src="js/app.js"></script>
+    <script src="Directivas/directiva.js"></script>
+</head>
+
+<body ng-app="appPrueba" ng-controller="MainController as $ctrl">
+
+    <cabeza></cabeza>
+
+    <!--Ejemplo de directiva con transclusion-->
+    
+    <post titulo={{$ctrl.aPost[0].titulo}} autor={{$ctrl.aPost[0].autor}} 
+        fecha={{$ctrl.aPost[0].fecha|date:'fullDate'}}>
+        <p>Lorem ipsum dolor sit amet, <strong>consectetur adipisicing elit</strong>. 
+            Libero dolor aliquid accusamus quibusdam ipsam tempore reiciendis laborum, 
+            laudantium delectus odit, id asperiores. 
+            Voluptates officiis quaerat voluptatum a, excepturi consequuntur possimus.
+        </p>
+    </post>
+
+    <post titulo={{$ctrl.aPost[1].titulo}} autor={{$ctrl.aPost[1].autor}} 
+        fecha={{$ctrl.aPost[1].fecha|date:'fullDate'}}>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+            <q>Libero dolor aliquid accusamus quibusdam ipsam tempore reiciendis laborum, 
+            laudantium delectus odit, id asperiores</q>. 
+            Voluptates officiis quaerat voluptatum a, excepturi consequuntur possimus.
+        </p>
+    </post>
+
+    <pie></pie>        
+
+</body>
+</html>
+
+

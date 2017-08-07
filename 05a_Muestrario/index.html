@@ -16,6 +16,8 @@
 	<link rel="stylesheet" href="css/default.css">
 	<link rel="stylesheet" href="css/colores.css">
 	<link rel="icon" href="fav_icon.png">
+	<script src="../node_modules/angular/angular.min.js"></script>
+	<script src="js/appModule.js"></script>
 </head>
 
 <body ng-app = "appModule" ng-controller= "AppController">
@@ -44,7 +46,5 @@
 		<div class="colores" id="olive" ng-hide="isHidden">Verde oliva</div>
 	</article>
 	<footer ng-include="'../common/_footer.html'"></footer>
-	<script type="text/javascript" src="../../lib/angular/angular.min.js"></script>
-	<script type="text/javascript" src="js/appModule.js"></script>
 </body>
 </html>

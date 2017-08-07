@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<!-- Ejemplo de AngularJS;
+	Creación de una directiva propia dpUsuario lo muy simple:
+	un template de HTML con algunas expresiones de Angular -->
+
+<html lang="es">
+<head>
+	<meta name="keywords" content="web, learning, html5, css3, angularJS">
+	<meta name="author" content="Alejandro" >
+	<meta name="description" content="Ejercicios de angularJS">
+	<meta name="generator" content="Visual Studio Code">
+	<meta charset="UTF-8">
+	<title>Datos de un Usuario</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="icon" href="fav_icon.png">
+	<script src="../node_modules/angular/angular.min.js"></script>
+	<script src="js/appModule.js"></script>
+</head>
+
+<body ng-app = "appModule" ng-controller= "AppController">
+	<header>
+		<h1>Datos de un Usuario</h1>
+	</header>
+	<article>
+		<form name="formulario">
+			<label for="fNombre" id="lblNombre">Nombre</label>
+			<input type="text" id="fNombre" name="fNombre" ng-model="oUsuario.nombre" ng-change="isHidden = true">
+			<label for="fNombre" id="lblNombre">Apellido</label>
+			<input type="text" id="fNombre" name="fNombre" ng-model="oUsuario.apellido" ng-change="isHidden = true"> 			
+			<label></label>
+			<input type="button"  id="boton" value="Borrar nombre" ng-click="borrarDatos()">	
+		</form>
+
+		<p dp-User></p>
+
+		<p>Los datos que se muestran a continuación<br>
+		sólo están disponibles para el usuario inicial</p>		
+		<dl>
+			<dt>Fecha de alta</dt><dd ng-hide="isHidden">{{oUsuario.fechaAlta |date:shortdate}}</dd>
+			<dt>Consumo de datos</dt><dd ng-hide="isHidden">{{oUsuario.consumoDatos | number:2}}</dd>
+			<dt></dt><dd></dd>
+		</dl>
+	</article>
+	<footer ng-include=" '../common/_footer.html' "></footer>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="keywords" content="web, learning, html5, css3, angularJS">
+	<meta name="author" content="Alejandro" >
+	<meta name="description" content="Ejercicios de angularJS">
+	<meta name="generator" content="Visual Studio Code">
+	<meta charset="UTF-8">
+	<title>Directivas</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="icon" href="fav_icon.png">    
+	<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="Directivas/directiva.js"></script>
+</head>
+
+<body ng-app="appPrueba" ng-controller="MainController as $ctrl">
+
+    <ng-include src="'partials/cabeza.html'"></ng-include>     
+
+    <bloque2></bloque2>         
+
+    <add-texto alt="texto alternanivo"></add-texto>
+
+    <p>Variable en el scope padre {{$ctrl.texto}}</p>
+
+    <ng-include src="'partials/pie.html'"></ng-include>        
+
+</body>
+</html>
+
+
