@@ -1,0 +1,24 @@
+
+<div class="row">	
+    <nav class="col-xs-6 col-xs-offset-3 navbar navbar-default ">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <a class="navbar-brand" href="#">{{$ctrl.menuTitle}}</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <button class = "btn btn-lg" ng-click="$ctrl.mainMenu(0)">
+                    {{$ctrl.aOpciones[0].label}}</button>
+            </li>
+            <li>
+                <button class = "btn btn-lg" ng-click="$ctrl.mainMenu(1)">
+                    {{$ctrl.aOpciones[1].label}}</button>
+            </li>
+            <li>
+                <button class = "btn btn-lg" ng-click="$ctrl.mainMenu(2)">
+                    {{$ctrl.aOpciones[2].label}}</button>
+            </li>
+        </ul>
+    </div>
+    </nav>
+</div>

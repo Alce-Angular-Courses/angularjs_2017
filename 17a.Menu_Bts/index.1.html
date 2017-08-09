@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Estructuras con menú</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Ejercicios de AngularJS">
+	<meta name="author" content="Alejandro Cerezo">  	
+	<meta name="generator" content="Visual Studio Code">
+	<link rel="shortcut icon" href="fav_icon.png">
+  	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">		
+  	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+	<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>	
+
+</head>
+
+<body ng-app="appPrueba" ng-controller="MainController as $ctrl">
+
+    <ng-include src="'partials/cabeza.html'"></ng-include>     
+    <ng-include src="'partials/menu.html'"></ng-include>     
+    
+    <ng-include ng-if="$ctrl.aOpciones[0].esActivo" src="'partials/cuerpo0.html'"></ng-include>     
+    <ng-include ng-if="$ctrl.aOpciones[1].esActivo" src="'partials/cuerpo1.html'"></ng-include>     
+    <ng-include ng-if="$ctrl.aOpciones[2].esActivo" src="'partials/cuerpo2.html'"></ng-include>     
+
+    <ng-include src="'partials/pie.html'"></ng-include>        
+
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+

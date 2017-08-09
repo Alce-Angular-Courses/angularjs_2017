@@ -1,0 +1,57 @@
+<!-- Ejemplo de AngularJS;
+	Componentes en Angular 1.5/1.6
+    Se refactorizan las directivas cabecera y pie como componentes
+
+    Se crean dos componentes :
+        - con estado: add-Texto. Tiene su propio scope totalmemte aislado, 
+          en el que se almacenan los resultados de la interacción con el usuario (el estado)
+        - sin estado : dos-botones. Para que este totalmente desacoplado hay que
+         pasarle tanto los strings como las funciones que necesita utilizar
+    ... -->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Componentes</title>	
+	<meta charset="UTF-8">
+	<meta name="description" content="Ejercicios de AngularJS">
+	<meta name="author" content="Alejandro Cerezo">  	
+	<meta name="generator" content="Visual Studio Code">
+    <link rel="stylesheet" href="../node_modules/bootstrap/css/bootstrap.min.css">		
+  	<link rel="stylesheet" href="../node_modules/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="icon" href="fav_icon.png">
+	<script src="../node_modules/angular/angular.min.js"></script>
+	<script src="../node_modules/angular/i18n/angular-locale_es-es.js"></script>
+</head>
+
+<body ng-app="appPrueba" ng-controller="MainController as $ctrl">
+
+    <app-cabeza></app-cabeza>
+       
+    <div class="row">	
+        <article class="col-xs-6 col-xs-offset-3">
+
+        <add-texto></add-texto>
+
+        <dos-botones btn1="$ctrl.btn1" btn1-clic="$ctrl.botonEnviar()"
+                    btn2="$ctrl.btn2" btn2-clic="$ctrl.botonBorrar()">                 
+        </dos-botones>
+
+        <p class="panel"> Variable en el scope padre: <i>{{$ctrl.texto}}</i></p>
+
+        </article>
+    </div>
+
+    <app-pie></app-pie>
+
+    <script src="js/app.js"></script>
+    <script src="componentes/app-cabeza.component.js"></script>
+    <script src="componentes/app-pie.component.js"></script>
+    <script src="componentes/addTexto.component.js"></script>
+    <script src="componentes/dosBotones.component.js"></script>
+</body>
+</html>
+
+
