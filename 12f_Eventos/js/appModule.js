@@ -1,7 +1,7 @@
 angular.module("appModule", [])
 .controller('AppController', ['$scope','$timeout', function($scope, $timeout){
 
-	$scope.$parent.sEmpresa = "CAS Training"
+	$scope.$parent.sEmpresa = "DesFuFor"
 	$scope.messages = [{
 		sender: 'User1',
 		text: 'Mensage 1'

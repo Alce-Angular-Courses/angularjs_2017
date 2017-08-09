@@ -16,6 +16,7 @@
 	<link rel="icon" href="fav_icon.png">
 	<script src="../node_modules/angular/angular.min.js"></script>
 	<script src="js/appModule.js"></script>
+	<script src="js/appDirectivas.js"></script>
 </head>
 
 <body ng-app = "appModule" ng-controller= "AppController">
@@ -32,7 +33,11 @@
 			<input type="button"  id="boton" value="Borrar nombre" ng-click="borrarDatos()">	
 		</form>
 
-		<p dp-User></p>
+		<p> Inicio de la directiva</p>
+		<hr>
+		<dp-User></dp-User>
+		<hr>
+		<p>Fin de la directiva</p>
 
 		<p>Los datos que se muestran a continuación<br>
 		sólo están disponibles para el usuario inicial</p>		

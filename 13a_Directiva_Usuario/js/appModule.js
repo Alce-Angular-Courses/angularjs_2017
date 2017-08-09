@@ -1,7 +1,9 @@
-angular.module("appModule", [])
+angular.module("appModule", [
+	"appDirectivas"
+])
 .controller('AppController', ['$scope', function($scope){
 
-	$scope.$parent.sEmpresa = "CAS Training"
+	$scope.$parent.sEmpresa = "DesFuFor"
 
 	$scope.oUsuario = {
 		nombre: 'Pepe',
@@ -18,9 +20,5 @@ angular.module("appModule", [])
 	}	
 	
 }])
-.directive("dpUser", function (){
-	return {
-		// restrict: 'E' 
-		template: "<strong>Usuario</strong><br>Nombre: {{oUsuario.nombre.toUpperCase()}}<br>Apellido: {{oUsuario.apellido.toUpperCase()}}"
-	}
-})
+.controller()
+
