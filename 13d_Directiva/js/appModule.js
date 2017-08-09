@@ -12,7 +12,7 @@ angular.module("appModule", [])
 		template: '<p ng-click="clearMessage()">Hello, World! {{message}} </p>',
 		link: function(scope, elem, attrs) {
 			scope.$watch('message', function(value) {
-				console.log('Message Changed!');
+				console.log('Message Modificado!');
 			});
 			scope.clearMessage = function() {
 				scope.message = '';
