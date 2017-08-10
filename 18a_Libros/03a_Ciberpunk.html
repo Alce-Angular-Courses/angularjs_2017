@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="web, learning, html5, css3">
+	<meta name="author" content="Alejandro">
+	<meta name="description" content="Ejercicios de HTML5 / AJAX">
+	<meta name="generator" content="Visual Studio Code 2">
+	<title>Catálogo con AJAX</title>
+	<link href="fav_icon.png" rel="shortcut icon"> 
+	<link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/cyberpunk.css">
+</head>
+<body ng-app="appLibros" ng-controller="AppController">
+ 	<header>
+		<h1>Bibliografía ciberpunk</h1>
+	</header>
+	<div id="borde"></div>
+	<section>
+		<div>
+		<nav>
+			<p>Pulsa una portada para seleccionar el libro</p>
+<!--
+			<a href="#" id ="Software" ng-click=" libroClic($event)">
+				<img src="images/Software.min.jpg" title = "Software  (1982)" alt = "Portada de la novela Software (1982)" class="icono">
+			</a>
+
+			<a href="#" id="Neuromante" ng-click=" libroClic($event)">
+				<img src="images/Neuromante.min.jpg" title="Neuromante  (1984)" alt="Portada de la novela Neuromante (1984)" class="icono">
+			</a>
+
+			Este sería el código para cada libro: lo teraladamos a una directiva propia
+			que luego iteramos a partir de un array de objetos
+			correspondientes a cada libro que queremos incluir en el menú
+
+-->
+			<span ng-repeat="oLibro in aLibros">
+				<span dp-enlace-libro></span>
+			</span>
+		</nav>
+
+		<article id="principal">
+			<h2>Datos del libro seleccionado</h2>
+			<div id="contenidos">
+				<div ng-include =" esInicio ? 'partials/inicio.html' : ''"></div>
+				<div ng-bind-html = "sDatosLibro"></div>
+			</div>
+    		<img id="img_libro" ng-src="{{oImgLibro.url}}" alt="{{oImgLibro.alt}}">				
+		</article>
+
+		</div>
+	<footer ng-include=" '../common/_footer.html' "></footer>
+	</section>
+	<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/appLibros.js"></script>
+</body>
