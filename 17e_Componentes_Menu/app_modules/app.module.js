@@ -1,13 +1,6 @@
 angular.module('appMenuComponentes', [
     'ngRoute'
 ])
-.value("textos", {
-    'titulo' : 'Inicios de Angular 1.6',
-    'autor' : 'Alejandro L. Cerezo',
-    'correo' : 'alcerezo@movistar.es',
-    'lugar' : 'Madrid',
-    'empresa' : 'CAS Training' 
-})
 .config(['$locationProvider', function ($locationProvider){
     $locationProvider.html5Mode(true);
 }])
