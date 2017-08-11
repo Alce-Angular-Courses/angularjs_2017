@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<!-- Ejemplo de AngularJS;
+	... -->
+
+<html lang="es">
+<head>
+	<meta name="keywords" content="web, learning, html5, css3, angularJS">
+	<meta name="author" content="Alejandro" >
+	<meta name="description" content="Ejercicios de angularJS">
+	<meta name="generator" content="Visual Studio Code">
+	<meta charset="UTF-8">
+	<title>Paises del Mundo</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="icon" href="fav_icon.png">
+</head>
+
+<body ng-app = "appModule" ng-controller= "AppController">
+	<header>
+		<h1>Paises del Mundo</h1>
+	</header>
+	<form>
+		<label>Selecciona un continente:</label>
+			<select ng-model="url" ng-change="buscarPaises()">
+				<option value="http://restcountries.eu/rest/v1/region/africa">Africa</option>
+				<option value="http://restcountries.eu/rest/v1/region/europe">Europa</option>
+				<option value="http://restcountries.eu/rest/v1/region/americas">America</option>
+			</select>
+	</form>	
+	<article>
+		<ul>
+			<li ng-repeat="pais in aPaises">
+				País: <span>{{pais.name}}</span>, capital: {{pais.capital}}
+			</li>
+		</ul>
+	</article>
+	<footer ng-include=" '../common/_footer.html' "></footer>
+	<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/appModule.js"></script>
+</body>
+</html>

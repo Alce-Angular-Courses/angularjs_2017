@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<!-- Ejemplo de AngularJS;
+	... -->
+
+<html lang="es">
+<head>
+	<meta name="keywords" content="web, learning, html5, css3, angularJS">
+	<meta name="author" content="Alejandro" >
+	<meta name="description" content="Ejercicios de AngularJS">
+	<meta name="generator" content="Sublime Text">
+	<meta charset="UTF-8">
+	<title>Servicios</title>
+	<link rel="stylesheet" href="css/default.css">
+	<link rel="icon" href="fav_icon.png">
+</head>
+
+<body ng-app = "appModule" ng-controller= "AppController">
+	<header>
+		<h1>Servicios</h1>
+	</header>
+	<article>
+		<p><button ng-click="boton1()">Servicio 1</button></p>		
+		<p>Nombre: <input type="text" ng-model=user.name>
+				<button ng-click="boton2()">Servicio 2</button>
+		</p>
+	</article>
+		<footer>
+		<p>Alejandro L. Cerezo - Madrid 2015</p>
+	</footer>
+	<script type="text/javascript" src="../node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="js/appModule.js"></script>
+</body>
+</html>
