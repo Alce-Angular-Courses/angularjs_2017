@@ -23,8 +23,9 @@ class AppController {
        this.user.name = '';
        this.user.apellido = '';
     }
-}    
-
+}  
+ 
 angular.module('appMain')
 .controller('AppController', AppController)
 
+ 
